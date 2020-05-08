@@ -1,3 +1,5 @@
+See **[Demo](https://pivandrey.github.io/emails-input/)** on Github Pages 
+
 
 ## Installation
 
@@ -20,6 +22,12 @@ and include `emailsinput.min.js` just above your closing `</body>` tag...
 ```
 
 If you downloaded the package via zip file from Github, these files are located in the `dist` folder. 
+
+## Sandbox
+You can run webpack dev-server as sandbox:
+1. `npm install`
+2. `npm run start`
+3. open `localhost:8000` in your browser
 
 ## Basic Usage
 
