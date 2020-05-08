@@ -1,39 +1,41 @@
-const place = document.getElementById('emails-input');
-const emailsInput = EmailsInput(place, {
+var place = document.getElementById('emails-input');
+var emailsInput = EmailsInput(place, {
     initialEmails: [ 'mail@mail.ru', 'pibcandrey777@gmail.com' ],
     domains: ['mail.ru', 'yandex.ru', 'uvas.su'],
 });
 
-const addRandomButton = document.getElementById('addRandom');
-addRandomButton.onclick = () => {
+var addRandomButton = document.getElementById('addRandom');
+addRandomButton.onclick = function() {
     emailsInput.addRandom();
 };
 
-const getCountButton = document.getElementById('getCount');
-getCountButton.onclick = () => {
+var getCountButton = document.getElementById('getCount');
+getCountButton.onclick = function() {
     emailsInput.getCount();
 };
 
-const getAllEmails = document.getElementById('getAllEmails');
-getAllEmails.onclick = () => {
+var getAllEmails = document.getElementById('getAllEmails');
+getAllEmails.onclick = function() {
     emailsInput.getAllEmails();
 };
 
-const replaceAllEmail = document.getElementById('replaceAllEmail');
-replaceAllEmail.onclick = () => {
+var replaceAllEmail = document.getElementById('replaceAllEmail');
+replaceAllEmail.onclick = function() {
     emailsInput.replaceAllEmail();
 };
 
-const subscribeFn = emails => {
-    const emailList = emails.map(email => email.email);
+function subscribeFn(emails) {
+    var emailList = emails.map(function(email) {
+        return email.email
+    });
     alert(emailList);
-};
+}
 
-const subscribeBtn = document.getElementById('subscribe');
-subscribeBtn.onclick = () => {
+var subscribeBtn = document.getElementById('subscribe');
+subscribeBtn.onclick = function() {
     emailsInput.subscribe(subscribeFn);
 };
-const unsubscribeBtn = document.getElementById('unsubscribe');
-unsubscribeBtn.onclick = () => {
+var unsubscribeBtn = document.getElementById('unsubscribe');
+unsubscribeBtn.onclick = function() {
     emailsInput.unsubscribe(subscribeFn);
 };
