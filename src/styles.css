@@ -1,0 +1,87 @@
+.page {
+    max-width: 540px;
+    margin: 40px;
+}
+
+.example {
+    background: #FFFFFF;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.block {
+    background: #F8F8F7;
+    border-radius: 8px 8px 0px 0px;
+    padding: 32px 50px 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    color: #050038;
+    margin-bottom: 24px;
+}
+
+#emails-input {
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    padding: 24px 50px 32px;
+}
+
+.buttons > button:not(:nth-last-child(1)) {
+    margin-right: 16px;
+}
+
+.buttons > button {
+    background: #4262FF;
+    border-radius: 6px;
+    padding: 8px 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.apiButtons {
+    margin-top: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.apiButtons > h2 {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    color: #050038;
+    margin-bottom: 24px;
+    margin-left: 30px;
+}
+
+.apiButtons > button {
+    background: #4262FF;
+    border-radius: 6px;
+    padding: 8px 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.apiButtons > button:not(:nth-last-child(1)) {
+    margin-right: 8px;
+}
