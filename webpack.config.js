@@ -22,8 +22,8 @@ module.exports = (env, argv) => ({
 
     entry: (() => {
         const entry = {
-            EmailsInput: path.resolve(__dirname, 'src/emailsinput.js'),
-            script: env.dev && path.resolve(__dirname, 'src/script.js'),
+            EmailsInput: path.resolve(__dirname, 'src/emails-input/index.js'),
+            script: env.dev && path.resolve(__dirname, 'src/webpack-example/index.js'),
         };
 
         return Object.keys(entry).reduce((acc, key) => {
@@ -85,19 +85,12 @@ module.exports = (env, argv) => ({
                         }
                     }
                 ]
-            },
-            {
-                test: /\.svg$/,
-                loader: 'svg-inline-loader'
             }
         ]
     },
     devServer: {
         contentBase: path.resolve(__dirname, './'),
-        host: '0.0.0.0',
-        open: true,
-        port: 9001,
-        public: 'http://localhost:9001'
+        port: 8000
     },
 
     optimization: {
@@ -121,13 +114,7 @@ module.exports = (env, argv) => ({
         }),
 
         !env.prod && new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, `src/index.html`),
-
-            chunks: [
-                'EmailsInput',
-                env.dev && 'script'
-            ].filter(Boolean),
-            chunksSortMode: 'manual'
+            template: path.resolve(__dirname, `src/webpack-example/webpack-index.html`)
         })
     ].filter(Boolean)
 });

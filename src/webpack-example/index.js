@@ -1,4 +1,4 @@
-require('./styles.css?cssModuleDisable');
+require('../styles.css?cssModuleDisable');
 
 const place = document.getElementById('emails-input');
 const emailsInput = EmailsInput(place, {
